@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h5 class="card-title mb-0">Tambah Data Timeline Magang</h5>
+        <h5 class="card-title mb-0"> Data Timeline Magang</h5>
     </div>
     <div class="card-body">
         <form action="<?= base_url('admin/timeline_magang/update/'. $timeline['id_timeline_magang']) ?>" method="post">

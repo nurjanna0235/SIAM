@@ -51,6 +51,7 @@
                 <textarea class="form-control" id="hasil_konsultasi" name="hasil_konsultasi" rows="3" placeholder="Masukkan Hasil Konsultasi"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Simpan</button>
+            <a href="<?= base_url('admin/laporan_kunjungan') ?>" class="btn btn-secondary">Batal</a>
         </form>
     </div>
 </div>

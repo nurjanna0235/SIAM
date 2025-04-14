@@ -33,6 +33,7 @@ $routes->get('/admin/logbook/tambah', 'Admin\LogbookController::tambah');
 $routes->post('/admin/logbook/simpan', 'Admin\LogbookController::simpan');
 $routes->get('/admin/logbook/edit/(:num)', 'Admin\LogbookController::edit/$1');
 $routes->post('/admin/logbook/update/(:num)', 'Admin\LogbookController::update/$1');
+$routes->get('/admin/logbook/detail/(:num)', 'Admin\LogbookController::detail/$1');
 $routes->get('/admin/logbook/hapus/(:num)', 'Admin\LogbookController::hapus/$1');
 
 //route untuk admin bagian timeline magang

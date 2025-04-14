@@ -16,9 +16,7 @@
 						<tr>
 							<th>No</th>
 							<th>Hari/Tanggal</th>
-							<th>Jenis Kegiatan</th>
-							<th>Uraian Kegiatan</th>
-							<th>Gambar</th>
+							<th>Nama Siswa</th>
 							<th>Aksi</th>
 						</tr>
 					</thead>
@@ -26,13 +24,13 @@
 						<!-- Contoh data statis, ganti dengan data dinamis dari database -->
 						<tr>
 							<td>1</td>
+
 							<td>Kamis, 23 Juli 2024</td>
-							<td>Perbaikan</td>
-							<td>Ganti Oli</td>
-							<td><img src="/path/to/image.jpg" alt="Gambar" width="50"></td>
+							<td>Janna</td>
 							<td class="d-flex justify-content-start gap-1">
-								<a href="/admin/logbook/edit" class="btn btn-warning btn-sm" onclick="editData(1)">Edit</a>
-								<a href="/admin/logbook/hapus" class="btn btn-danger btn-sm" onclick="hapusData(1)">Hapus</a>
+								<a href="/admin/logbook/edit/1" class="btn btn-warning btn-sm" >Edit</a>
+								<a href="/admin/logbook/detail/1" class="btn btn-primary btn-sm" >Detail</a>
+								<a href="/admin/logbook/hapus/1" class="btn btn-danger btn-sm" >Hapus</a>
 							</td>
 						</tr>
 						<!-- Tambahkan data lainnya di sini -->

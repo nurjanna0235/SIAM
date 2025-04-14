@@ -43,8 +43,8 @@
 							<td><img src="/path/to/image.jpg" alt="Gambar" width="50"></td>
 							<td>Hasil A</td>
 							<td class="d-flex justify-content-between">
-							<a href="/admin/laporan_kunjungan/edit"  class="btn btn-warning btn-sm me-2" onclick="editData(1)">Edit</a>
-							<a href="/admin/laporan_kunjungan/hapus" class="btn btn-danger btn-sm me-2" onclick="hapusData(1)">Hapus</a>
+							<a href="/admin/laporan_kunjungan/edit/1"  class="btn btn-warning btn-sm me-2">Edit</a>
+							<a href="/admin/laporan_kunjungan/hapus/1" class="btn btn-danger btn-sm me-2">Hapus</a>
 							</td>
 						</tr>
 						<!-- Tambahkan data lainnya di sini -->

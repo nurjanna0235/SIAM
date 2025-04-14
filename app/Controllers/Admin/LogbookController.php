@@ -48,38 +48,38 @@ class LogbookController extends BaseController
     }
     public function edit($id)
     {
-        $logbookModel = new \App\Models\LogbookModel();
-        $logbook = $logbookModel->find($id);
+        // $logbookModel = new \App\Models\LogbookModel();
+        // $logbook = $logbookModel->find($id);
 
-        if (!$logbook) {
-            return redirect()->to('admin/logbook')->with('error', 'Data tidak ditemukan.');
-        }
+        // if (!$logbook) {
+        //     return redirect()->to('admin/logbook')->with('error', 'Data tidak ditemukan.');
+        // }
 
-        if ($this->request->getMethod() === 'post') {
-            $data = [
-                'hari_tanggal' => $this->request->getPost('hari_tanggal'),
-                'jenis_kegiatan' => $this->request->getPost('jenis_kegiatan'),
-                'uraian_kegiatan' => $this->request->getPost('uraian_kegiatan'),
-            ];
+        // if ($this->request->getMethod() === 'post') {
+        //     $data = [
+        //         'hari_tanggal' => $this->request->getPost('hari_tanggal'),
+        //         'jenis_kegiatan' => $this->request->getPost('jenis_kegiatan'),
+        //         'uraian_kegiatan' => $this->request->getPost('uraian_kegiatan'),
+        //     ];
 
-            // Check if a new image is uploaded
-            $gambar = $this->request->getFile('gambar');
-            if ($gambar && $gambar->isValid() && !$gambar->hasMoved()) {
-                $gambar->move(WRITEPATH . 'uploads');
-                $data['gambar'] = $gambar->getName();
-            }
+        //     // Check if a new image is uploaded
+        //     $gambar = $this->request->getFile('gambar');
+        //     if ($gambar && $gambar->isValid() && !$gambar->hasMoved()) {
+        //         $gambar->move(WRITEPATH . 'uploads');
+        //         $data['gambar'] = $gambar->getName();
+        //     }
 
-            if ($logbookModel->update($id, $data)) {
-                return redirect()->to('admin/logbook')->with('success', 'Data berhasil diperbarui.');
-            } else {
-                return redirect()->back()->withInput()->with('error', 'Gagal memperbarui data.');
-            }
-        }
+        //     if ($logbookModel->update($id, $data)) {
+        //         return redirect()->to('admin/logbook')->with('success', 'Data berhasil diperbarui.');
+        //     } else {
+        //         return redirect()->back()->withInput()->with('error', 'Gagal memperbarui data.');
+        //     }
+        // }
 
         $data = [
             'title' => 'Edit Logbook',
-            'logbook' => $logbook,
-            'content' => view('admin/logbook/edit', ['logbook' => $logbook]), // isi kontennya dengan data
+            // 'logbook' => $logbook,
+            'content' => view('admin/logbook/edit'), // isi kontennya dengan data
         ];
         return view('template/template-admin', $data); // panggil template tunggal
     }
@@ -105,6 +105,22 @@ class LogbookController extends BaseController
         } else {
             return redirect()->back()->withInput()->with('error', 'Gagal menyimpan data.');
         }
+    }
+
+    public function detail($id){
+        // $logbookModel = new \App\Models\LogbookModel();
+        // $logbook = $logbookModel->find($id);
+
+        // if (!$logbook) {
+        //     return redirect()->to('admin/logbook')->with('error', 'Data tidak ditemukan.');
+        // }
+
+        $data = [
+            'title' => 'Detail Logbook',
+          
+            'content' => view('admin/logbook/detail'), // isi kontennya dengan data
+        ];
+        return view('template/template-admin', $data); // panggil template tunggal
     }
     public function hapus($id)
     {

@@ -19,6 +19,8 @@
 
     <link href="/adminkit-dev/static/css/app.css" rel="stylesheet">
     <link href="/https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
@@ -48,6 +50,13 @@
                         <a class="sidebar-link" href="/admin/siswa">
                             <i class="align-middle" data-feather="user"></i>
                             <span class="align-middle">Siswa</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item <?= uri_string() == 'admin/orang_tua' ? 'active' : '' ?>">
+                        <a class="sidebar-link" href="/admin/orang_tua">
+                            <i class="align-middle" data-feather="user"></i>
+                            <span class="align-middle">Orangtua Murid</span>
                         </a>
                     </li>
 
@@ -349,6 +358,7 @@
             });
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Pie chart
