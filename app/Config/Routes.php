@@ -10,7 +10,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/login', 'Auth::index');
 $routes->get('/admin/dashboard', 'Admin\DashboardController::index');
 
-//route admin// 
+//route admin////
 //route untuk admin bagian lokasi
 $routes->get('/admin/lokasi', 'Admin\LokasiController::index');
 $routes->get('/admin/lokasi/tambah', 'Admin\LokasiController::tambah');
