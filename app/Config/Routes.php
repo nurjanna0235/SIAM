@@ -27,6 +27,14 @@ $routes->get('/admin/siswa/edit/(:num)', 'Admin\SiswaController::edit/$1');
 $routes->post('/admin/siswa/update/(:num)', 'Admin\SiswaController::update/$1');
 $routes->get('/admin/siswa/hapus/(:num)', 'Admin\SiswaController::hapus/$1');
 
+//route untuk admin bagian orang tua siswa
+$routes->get('/admin/orang_tua_siswa', 'Admin\OrangTuaSiswaController::index');
+$routes->get('/admin/orang_tua_siswa/tambah', 'Admin\OrangTuaSiswaController::tambah');
+$routes->post('/admin/orang_tua_siswa/simpan', 'Admin\OrangTuaSiswaController::simpan');   
+$routes->get('/admin/orang_tua_siswa/edit/(:num)', 'Admin\OrangTuaSiswaController::edit/$1');
+$routes->post('/admin/orang_tua_siswa/update/(:num)', 'Admin\OrangTuaSiswaController::update/$1');
+$routes->get('/admin/orang_tua_siswa/hapus/(:num)', 'Admin\OrangTuaSiswaController::hapus/$1');
+
 //route untuk admin bagian logbook
 $routes->get('/admin/logbook', 'Admin\LogbookController::index');
 $routes->get('/admin/logbook/tambah', 'Admin\LogbookController::tambah');

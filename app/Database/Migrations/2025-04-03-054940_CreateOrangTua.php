@@ -23,6 +23,14 @@ class CreateOrangTua extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => 100,
             ],
+            'alamat' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 100,
+            ],
+            'no_hp' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 100,
+            ],
             'created_at' => [
                 'type'    => 'DATETIME',
                 'null'    => true,

@@ -16,7 +16,7 @@ class CreateLokasi extends Migration
             'deskripsi'     => ['type' => 'TEXT'],
             'longitude'     => ['type' => 'VARCHAR', 'constraint' => '100'],
             'latitude'      => ['type' => 'VARCHAR', 'constraint' => '100'],
-            'nama_tempat'   => ['type' => 'VARCHAR', 'constraint' => '100'],
+            'lokasi_siswa'   => ['type' => 'VARCHAR', 'constraint' => '100'],
             'created_at'    => ['type' => 'DATETIME', 'null' => true],
             'updated_at'    => ['type' => 'DATETIME', 'null' => true],
         ]);

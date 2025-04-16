@@ -53,8 +53,8 @@
                         </a>
                     </li>
 
-                    <li class="sidebar-item <?= uri_string() == 'admin/orang_tua' ? 'active' : '' ?>">
-                        <a class="sidebar-link" href="/admin/orang_tua">
+                    <li class="sidebar-item <?= uri_string() == 'admin/orang_tua_siswa' ? 'active' : '' ?>">
+                        <a class="sidebar-link" href="/admin/orang_tua_siswa">
                             <i class="align-middle" data-feather="user"></i>
                             <span class="align-middle">Orangtua Murid</span>
                         </a>
@@ -78,6 +78,13 @@
                         <a class="sidebar-link" href="/admin/laporan_kunjungan">
                             <i class="align-middle" data-feather="book"></i>
                             <span class="align-middle">Laporan Kunjungan</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item <?= uri_string() == 'admin/validasi_lokasi' ? 'active' : '' ?>">
+                        <a class="sidebar-link" href="/admin/validasi_lokasi">
+                            <i class="align-middle" data-feather="book"></i>
+                            <span class="align-middle">Validasi lokasi</span>
                         </a>
                     </li>
 

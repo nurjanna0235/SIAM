@@ -16,7 +16,7 @@ class SiswaController extends BaseController
         $data = [
             'title' => 'Siswa',
             'siswa' => $siswa,
-            'content' => view('admin/siswa/siswa',['siswa' => $siswa]), // ini isi kontennya
+            'content' => view('admin/siswa/siswa', ['siswa' => $siswa]), // ini isi kontennya
         ];
         return view('template/template-admin', $data); // panggil template tunggal
     }
@@ -39,7 +39,7 @@ class SiswaController extends BaseController
         $data = [
             'title' => 'Edit Siswa',
             'siswa' => $siswa,
-            'content' => view('admin/siswa/edit',['siswa' => $siswa]), // isi kontennya dengan data
+            'content' => view('admin/siswa/edit', ['siswa' => $siswa]), // isi kontennya dengan data
         ];
         return view('template/template-admin', $data); // panggil template tunggal
     }
@@ -53,7 +53,7 @@ class SiswaController extends BaseController
             'nik' => 'required|numeric',
             'kelas' => 'required',
             'jurusan' => 'required',
-            
+
         ]);
 
         if (!$this->validate($validation->getRules())) {
@@ -103,8 +103,9 @@ class SiswaController extends BaseController
             'jurusan' => $this->request->getPost('jurusan'),
         ];
 
+
         if ($siswaModel->update($id, $data)) {
-            return redirect()->to('admin/siswa')->with('success', 'Data berhasil diperbarui.');
+            return redirect()->to('admin/siswa')->with('success', 'Data berhasil diperbarui .');
         } else {
             return redirect()->back()->withInput()->with('error', 'Gagal memperbarui data.');
         }
@@ -129,5 +130,4 @@ class SiswaController extends BaseController
         ];
         return view('template/template-admin', $data); // panggil template tunggal
     }
-    
 }
