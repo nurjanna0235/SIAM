@@ -29,8 +29,7 @@ class CreateUser extends Migration
             ],
             'level'     => [
                 'type'       => 'ENUM',
-                'constraint' => ['admin', 'user'],
-                'default'    => 'user',
+                'constraint' => ['admin', 'siswa','orang_tua'],
             ],
             'created_at' => [
                 'type' => 'DATETIME',

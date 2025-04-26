@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class OrangTuaSiswa extends Model
+class OrangTuaSiswaModel extends Model
 {
-    protected $table = 'orang_siswa';      // Nama tabel di database
+    protected $table = 'orang_tua';      // Nama tabel di database
     protected $primaryKey = 'id_orang_tua';              // Primary key
 
     // Field yang boleh diisi (harus sesuai nama kolom di DB)
@@ -16,6 +16,7 @@ class OrangTuaSiswa extends Model
         'nama',
         'alamat',
         'no_hp',
+        'nik',
     ];
 
     // Optional: aktifkan timestamps kalau kamu punya kolom created_at dan updated_at

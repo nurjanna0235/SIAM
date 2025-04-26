@@ -20,4 +20,13 @@ class OrangTuaSiswaController extends BaseController
         ];
         return view('template/template-admin', $data); // panggil template tunggal
     }
+    public function tambah()
+    {
+        
+        $data = [
+            'title' => 'Tambah Orang Tua Siswa',
+            'content' => view('admin/orang_tua_siswa/tambah'), // ini isi kontennya
+        ];
+        return view('template/template-admin', $data); // panggil template tunggal
+    }
 }

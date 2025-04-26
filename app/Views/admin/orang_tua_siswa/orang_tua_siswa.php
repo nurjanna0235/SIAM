@@ -34,7 +34,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($OrangTuaSiwa as $index => $item): ?>
+                        <?php foreach ($OrangTuaSiswa as $index => $item): ?>
                             <tr>
                                 <td><?= $index + 1 ?></td>
                                 <td><?= esc($item['nama']) ?></td>

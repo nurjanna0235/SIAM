@@ -31,6 +31,10 @@ class CreateOrangTua extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => 100,
             ],
+            'nik' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 100,
+            ],
             'created_at' => [
                 'type'    => 'DATETIME',
                 'null'    => true,

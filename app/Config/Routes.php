@@ -6,6 +6,8 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
+$routes->get('/registrasi', 'Auth::registrasi');
+$routes->post('/registrasi/submit', 'Auth::submit');
 
 $routes->get('/login', 'Auth::index');
 $routes->get('/admin/dashboard', 'Admin\DashboardController::index');
@@ -59,3 +61,14 @@ $routes->post('/admin/laporan_kunjungan/simpan', 'Admin\LaporanKunjunganControll
 $routes->get('/admin/laporan_kunjungan/edit/(:num)', 'Admin\LaporanKunjunganController::edit/$1');
 $routes->post('/admin/laporan_kunjungan/update/(:num)', 'Admin\LaporanKunjunganController::update/$1');
 $routes->get('/admin/laporan_kunjungan/hapus/(:num)', 'Admin\LaporanKunjunganController::hapus/$1');
+
+//route untuk admin bagian validasi lokasi
+$routes->get('/admin/validasi_lokasi', 'Admin\ValidasiLokasiController::index');
+$routes->get('/admin/validasi_lokasi/tambah', 'Admin\ValidasiLokasiController::tambah');
+$routes->post('/admin/validasi_lokasi/simpan', 'Admin\ValidasiLokasiController::simpan');
+$routes->get('/admin/validasi_lokasi/edit/(:num)', 'Admin\ValidasiLokasiController::edit/$1');
+$routes->post('/admin/validasi_lokasi/update/(:num)', 'Admin\ValidasiLokasiController::update/$1');
+$routes->get('/admin/validasi_lokasi/hapus/(:num)', 'Admin\ValidasiLokasiController::hapus/$1');
+
+
+//route untuk admin bagian siswa

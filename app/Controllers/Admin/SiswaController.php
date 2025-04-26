@@ -4,6 +4,9 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
+use App\Models\SiswaModel;
+use App\Models\OrangTuaModel;
+use App\Models\OrangTuaSiswa;
 
 class SiswaController extends BaseController
 {
@@ -22,9 +25,14 @@ class SiswaController extends BaseController
     }
     public function tambah()
     {
+        // ambil data orang tua
+        $orangTuaModel = new OrangTuaSiswa();
+        $orangTua = $orangTuaModel->findAll();
+
         $data = [
             'title' => 'Tambah Siswa',
-            'content' => view('admin/siswa/tambah'), // ini isi kontennya
+            'orangTua' => $orangTua,
+            'content' => view('admin/siswa/tambah',['orang_tua' => $orangTua]), // ini isi kontennya
         ];
         return view('template/template-admin', $data); // panggil template tunggal
     }
@@ -64,6 +72,7 @@ class SiswaController extends BaseController
         $siswaModel = new \App\Models\SiswaModel();
 
         $data = [
+            'id_user' => 1,
             'nama' => $this->request->getPost('nama'),
             'nik' => $this->request->getPost('nik'),
             'kelas' => $this->request->getPost('kelas'),
