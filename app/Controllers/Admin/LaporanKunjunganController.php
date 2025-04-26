@@ -13,7 +13,7 @@ class LaporanKunjunganController extends BaseController
        
         $data = [
             'title' => 'LaporanKunjungan',
-            'content' => view('admin/laporan_kunjungan/laporan_kunjungan'), // ini isi kontennya
+            'content' => view('admin/laporan_kunjungan/index'), // ini isi kontennya
         ];
         return view('template/template-admin', $data); // panggil template tunggal
     }

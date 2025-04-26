@@ -32,64 +32,36 @@
                 </a>
 
                 <ul class="sidebar-nav">
-                    <li class="sidebar-item <?= uri_string() == 'admin/dashboard' ? 'active' : '' ?>">
-                        <a class="sidebar-link" href="/admin/dashboard">
+                    <li class="sidebar-item <?= uri_string() == 'siswa/dashboard' ? 'active' : '' ?>">
+                        <a class="sidebar-link" href="/siswa/dashboard">
                             <i class="align-middle" data-feather="sliders"></i>
                             <span class="align-middle">Dashboard</span>
                         </a>
                     </li>
 
-                    <li class="sidebar-item <?= uri_string() == 'admin/siswa' ? 'active' : '' ?>">
-                        <a class="sidebar-link" href="/admin/siswa">
+                    <li class="sidebar-item <?= uri_string() == 'siswa/lokasi' ? 'active' : '' ?>">
+                        <a class="sidebar-link" href="/siswa/lokasi">
                             <i class="align-middle" data-feather="user"></i>
-                            <span class="align-middle">Siswa</span>
+                            <span class="align-middle">Lokasi</span>
                         </a>
                     </li>
 
-                    <li class="sidebar-item <?= uri_string() == 'admin/orang_tua_siswa' ? 'active' : '' ?>">
-                        <a class="sidebar-link" href="/admin/orang_tua_siswa">
+                    <li class="sidebar-item <?= uri_string() == 'siswa/logbook' ? 'active' : '' ?>">
+                        <a class="sidebar-link" href="/siswa/logbook">
                             <i class="align-middle" data-feather="user"></i>
-                            <span class="align-middle">Orangtua Murid</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item <?= uri_string() == 'admin/logbook' ? 'active' : '' ?>">
-                        <a class="sidebar-link" href="/admin/logbook">
-                            <i class="align-middle" data-feather="log-in"></i>
                             <span class="align-middle">Logbook</span>
                         </a>
                     </li>
 
-                    <li class="sidebar-item <?= uri_string() == 'admin/timeline_magang' ? 'active' : '' ?>">
-                        <a class="sidebar-link" href="/admin/timeline_magang">
-                            <i class="align-middle" data-feather="user-plus"></i>
-                            <span class="align-middle">Timeline Magang</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item <?= uri_string() == 'admin/laporan_kunjungan' ? 'active' : '' ?>">
-                        <a class="sidebar-link" href="/admin/laporan_kunjungan">
-                            <i class="align-middle" data-feather="book"></i>
-                            <span class="align-middle">Laporan Kunjungan</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item <?= uri_string() == 'admin/validasi_lokasi' ? 'active' : '' ?>">
-                        <a class="sidebar-link" href="/admin/validasi_lokasi">
-                            <i class="align-middle" data-feather="book"></i>
-                            <span class="align-middle">Validasi lokasi</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item <?= uri_string() == 'admin/jurusan' ? 'active' : '' ?>">
-                        <a class="sidebar-link" href="/admin/jurusan">
-                            <i class="align-middle" data-feather="book"></i>
-                            <span class="align-middle">Jurusan</span>
+                    <li class="sidebar-item <?= uri_string() == 'siswa/profil' ? 'active' : '' ?>">
+                        <a class="sidebar-link" href="/siswa/profil">
+                            <i class="align-middle" data-feather="user"></i>
+                            <span class="align-middle"> Profil</span>
                         </a>
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="/admin/logout">
+                        <a class="sidebar-link" href="/siswa/logout">
                             <i class="align-middle" data-feather="log-out"></i>
                             <span class="align-middle">Logout</span>
                         </a>

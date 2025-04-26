@@ -19,7 +19,7 @@ class SiswaController extends BaseController
         $data = [
             'title' => 'Siswa',
             'siswa' => $siswa,
-            'content' => view('admin/siswa/siswa', ['siswa' => $siswa]), // ini isi kontennya
+            'content' => view('admin/siswa/index', ['siswa' => $siswa]), // ini isi kontennya
         ];
         return view('template/template-admin', $data); // panggil template tunggal
     }

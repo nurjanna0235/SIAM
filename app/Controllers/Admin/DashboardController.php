@@ -11,7 +11,7 @@ class DashboardController extends BaseController
     {
         $data = [
             'title' => 'Beranda',
-            'content' => view('admin/dashboard/dashboard'), // ini isi kontennya
+            'content' => view('admin/dashboard/index'), // ini isi kontennya
         ];
         return view('template/template-admin', $data); // panggil template tunggal
     }

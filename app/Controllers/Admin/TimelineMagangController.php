@@ -16,7 +16,7 @@ class TimelineMagangController extends BaseController
         $data = [
             'title' => 'Timeline Magang',
             'timelineMagang' => $timelineData,
-            'content' => view('admin/timeline_magang/timeline_magang', ['timelineMagang' => $timelineData]),
+            'content' => view('admin/timeline_magang/index', ['timelineMagang' => $timelineData]),
         ];
 
         return view('template/template-admin', $data);

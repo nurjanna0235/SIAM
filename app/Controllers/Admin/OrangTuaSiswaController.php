@@ -16,7 +16,7 @@ class OrangTuaSiswaController extends BaseController
         $data = [
             'title' => 'Orang Tua Siswa',
             'OrangTuaSiswa' => $orangTuaSiswa,
-            'content' => view('admin/orang_tua_siswa/orang_tua_siswa',['OrangTuaSiswa' => $orangTuaSiswa]), // ini isi kontennya
+            'content' => view('admin/orang_tua_siswa/index',['OrangTuaSiswa' => $orangTuaSiswa]), // ini isi kontennya
         ];
         return view('template/template-admin', $data); // panggil template tunggal
     }

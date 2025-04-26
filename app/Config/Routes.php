@@ -7,19 +7,14 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 $routes->get('/registrasi', 'Auth::registrasi');
+$routes->get('/registrasi', 'Auth::login');
 $routes->post('/registrasi/submit', 'Auth::submit');
 
 $routes->get('/login', 'Auth::index');
 $routes->get('/admin/dashboard', 'Admin\DashboardController::index');
+$routes->get('/siswa/dashboard', 'Siswa\DashboardController::index');
 
-//route admin////
-//route untuk admin bagian lokasi
-$routes->get('/admin/lokasi', 'Admin\LokasiController::index');
-$routes->get('/admin/lokasi/tambah', 'Admin\LokasiController::tambah');
-$routes->post('/admin/lokasi/simpan', 'Admin\LokasiController::simpan');
-$routes->get('/admin/lokasi/edit/(:num)', 'Admin\LokasiController::edit/$1');
-$routes->post('/admin/lokasi/update/(:num)', 'Admin\LokasiController::update/$1');
-$routes->get('/admin/lokasi/hapus/(:num)', 'Admin\LokasiController::hapus/$1');
+//route admin//
 
 //route untuk admin bagian siswa
 $routes->get('/admin/siswa', 'Admin\SiswaController::index');
@@ -70,5 +65,36 @@ $routes->get('/admin/validasi_lokasi/edit/(:num)', 'Admin\ValidasiLokasiControll
 $routes->post('/admin/validasi_lokasi/update/(:num)', 'Admin\ValidasiLokasiController::update/$1');
 $routes->get('/admin/validasi_lokasi/hapus/(:num)', 'Admin\ValidasiLokasiController::hapus/$1');
 
+//route untuk admin bagian jurusan
+$routes->get('/admin/jurusan', 'Admin\JurusanController::index');
+$routes->get('/admin/jurusan/tambah', 'Admin\JurusanController::tambah');
+$routes->post('/admin/jurusan/simpan', 'Admin\JurusanController::simpan');
+$routes->get('/admin/jurusan/edit/(:num)', 'Admin\JurusanController::edit/$1');
+$routes->post('/admin/jurusan/update/(:num)', 'Admin\JurusanController::update/$1');
+$routes->get('/admin/jurusan/hapus/(:num)', 'Admin\JurusanController::hapus/$1');
 
-//route untuk admin bagian siswa
+
+//ROUTE SISWA//
+//route untuk siswa bagian Lokasi
+$routes->get('/siswa/lokasi', 'Siswa\LokasiController::index');
+$routes->get('/siswa/lokasi/tambah', 'Siswa\LokasiController::tambah');
+$routes->post('/siswa/lokasi/simpan', 'Siswa\LokasiController::simpan');
+$routes->get('/siswa/lokasi/edit/(:num)', 'Siswa\LokasiController::edit/$1');
+$routes->post('/siswa/lokasi/update/(:num)', 'Siswa\LokasiController::update/$1');
+$routes->get('/siswa/lokasi/hapus/(:num)', 'Siswa\LokasiController::hapus/$1');
+
+//route untuk siswa bagian Logbook
+$routes->get('/siswa/logbook', 'Siswa\LogbookController::index');
+$routes->get('/siswa/logbook/tambah', 'Siswa\LogbookController::tambah');
+$routes->post('/siswa/logbook/simpan', 'Siswa\LogbookController::simpan');
+$routes->get('/siswa/logbook/edit/(:num)', 'Siswa\LogbookController::edit/$1');
+$routes->post('/siswa/logbook/update/(:num)', 'Siswa\LogbookController::update/$1');
+$routes->get('/siswa/logbook/hapus/(:num)', 'Siswa\LogbookController::hapus/$1');
+
+//route untuk siswa bagian Profil
+$routes->get('/siswa/logbook', 'Siswa\ProfilController::index');
+$routes->get('/siswa/logbook/tambah', 'Siswa\ProfilController::tambah');
+$routes->post('/siswa/logbook/simpan', 'Siswa\ProfilController::simpan');
+$routes->get('/siswa/logbook/edit/(:num)', 'Siswa\ProfilController::edit/$1');
+$routes->post('/siswa/logbook/update/(:num)', 'Siswa\ProfilController::update/$1');
+$routes->get('/siswa/logbook/hapus/(:num)', 'Siswa\ProfilController::hapus/$1');

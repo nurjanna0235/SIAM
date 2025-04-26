@@ -11,7 +11,7 @@ class LogbookController extends BaseController
     {
         $data = [
             'title' => 'Logbook',
-            'content' => view('admin/logbook/logbook'), // ini isi kontennya
+            'content' => view('admin/logbook/index'), // ini isi kontennya
         ];
         return view('template/template-admin', $data); // panggil template tunggal
     }
