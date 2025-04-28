@@ -16,7 +16,7 @@ class SiswaModel extends Model
         'nama',
         'nik',
         'kelas',
-        'jurusan',
+        'id_jurusan',
     ];
 
     // Optional: aktifkan timestamps kalau kamu punya kolom created_at dan updated_at

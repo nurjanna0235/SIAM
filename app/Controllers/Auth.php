@@ -7,16 +7,35 @@ use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\SiswaModel;
 use App\Models\OrangTuaSiswaModel;
 use App\Models\UserModel;
+use App\Models\JurusanModel;
 
 class Auth extends BaseController
 {
+    public $siswaModel;
+/*************  ✨ Windsurf Command ⭐  *************/
+    /**
+     * Constructor.
+     *
+     * @return void
+     */
+/*******  2e206e6b-39ae-4777-9b0d-d3d79d9642b7  *******/    public $jurusanModel;
+
+    public function __construct()
+    {
+        $this->siswaModel = new SiswaModel();
+        $this->jurusanModel = new JurusanModel();
+    }
+
     public function index()
     {
         return view('auth/login');
     }
 
     public function registrasi(){
-        return view('auth/registrasi');
+        $data = [
+            'jurusan' => $this->jurusanModel->findAll(),
+        ];
+        return view('auth/registrasi',$data);
     }
 
     public function submit() {
@@ -43,10 +62,10 @@ class Auth extends BaseController
                 $siswaModel->insert([
                     'id_orang_tua' => $cariOrtu['id_orang_tua'],
                     'id_user' => $id_user_siswa,
+                    'id_jurusan' => $this->request->getPost('id_jurusan'),
                     'nama' => $this->request->getPost('nama_siswa'),
                     'nik' => $this->request->getPost('nik'),
                     'kelas' => $this->request->getPost('kelas'),
-                    'jurusan' => $this->request->getPost('jurusan'),
                 ]);
     
                 return redirect()->to('/login')->with('success', 'Registrasi berhasil!');
@@ -89,7 +108,7 @@ class Auth extends BaseController
                 'nama' => $this->request->getPost('nama_siswa'),
                 'nik' => $this->request->getPost('nik'),
                 'kelas' => $this->request->getPost('kelas'),
-                'jurusan' => $this->request->getPost('jurusan')
+                'id_jurusan' => $this->request->getPost('id_jurusan')
             ]);
     
             return redirect()->to('/login')->with('success', 'Registrasi berhasil!');

@@ -12,7 +12,7 @@ class LokasiModel extends Model
     // Field yang boleh diisi (harus sesuai nama kolom di DB)
     protected $allowedFields = [
         'id_siswa',
-        'longtitude',
+        'longitude',
         'latitude',
         'lokasi_siswa',
         'kategori',
