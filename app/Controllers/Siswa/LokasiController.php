@@ -19,18 +19,17 @@ class LokasiController extends BaseController
     {
         
         // Ambil ID siswa dari session atau auth (misalnya)
-        $siswa_id = 5; // Sesuaikan dengan session atau metode autentikasi kamu
+        $siswa_id = 1; // Sesuaikan dengan session atau metode autentikasi kamu
         
         // Ambil data lokasi yang hanya milik siswa ini
         $data = [
             'title' => 'Lokasi Magang',
             'lokasi' => $this->LokasiModel->where('id_siswa', $siswa_id)->find(), // Menampilkan lokasi berdasarkan siswa_id
             'content' => view('siswa/lokasi/index', [
-                'lokasi' => $this->LokasiModel->where('id_siswa', $siswa_id)->find() // Data yang akan diteruskan ke view
+                'lokasi' => $this->LokasiModel->where('id_siswa', $siswa_id)->first()
             ])
         ];
     
-
         return view('template/template-siswa', $data);
     }
 
@@ -67,7 +66,7 @@ class LokasiController extends BaseController
 
         // Simpan ke database (contoh)
         $data = [
-            'id_siswa'     => 5, // ambil id siswa dari session
+            'id_siswa'     => 1, // ambil id siswa dari session
             'lokasi_siswa' => $lokasi_siswa,
             'kategori'     => $kategori,
             'deskripsi'    => $deskripsi,
