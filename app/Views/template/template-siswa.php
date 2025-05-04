@@ -60,6 +60,13 @@
                         </a>
                     </li>
 
+                    <li class="sidebar-item <?= uri_string() == 'siswa/jurusan' ? 'active' : '' ?>">
+                        <a class="sidebar-link" href="/siswa/jurusan">
+                            <i class="align-middle" data-feather="user"></i>
+                            <span class="align-middle"> Jurusan</span>
+                        </a>
+                    </li>
+
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="/siswa/logout">
                             <i class="align-middle" data-feather="log-out"></i>

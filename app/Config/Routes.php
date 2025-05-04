@@ -98,3 +98,11 @@ $routes->post('/siswa/logbook/simpan', 'Siswa\ProfilController::simpan');
 $routes->get('/siswa/logbook/edit/(:num)', 'Siswa\ProfilController::edit/$1');
 $routes->post('/siswa/logbook/update/(:num)', 'Siswa\ProfilController::update/$1');
 $routes->get('/siswa/logbook/hapus/(:num)', 'Siswa\ProfilController::hapus/$1');
+
+//route untuk siswa bagian Jurusan
+$routes->get('/siswa/jurusan', 'Siswa\JurusanController::index');
+$routes->get('/siswa/jurusan/tambah', 'Siswa\JurusanController::tambah');
+$routes->post('/siswa/jurusan/simpan', 'Siswa\JurusanController::simpan');
+$routes->get('/siswa/jurusan/edit/(:num)', 'Siswa\JurusanController::edit/$1');
+$routes->post('/siswa/jurusan/update/(:num)', 'Siswa\JurusanController::update/$1');
+$routes->get('/siswa/jurusan/hapus/(:num)', 'Siswa\JurusanController::hapus/$1');
