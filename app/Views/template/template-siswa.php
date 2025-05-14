@@ -60,12 +60,7 @@
                         </a>
                     </li>
 
-                    <li class="sidebar-item <?= uri_string() == 'siswa/jurusan' ? 'active' : '' ?>">
-                        <a class="sidebar-link" href="/siswa/jurusan">
-                            <i class="align-middle" data-feather="user"></i>
-                            <span class="align-middle"> Jurusan</span>
-                        </a>
-                    </li>
+
 
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="/siswa/logout">
@@ -273,7 +268,7 @@
     <script src="/adminkit-dev/src/js/app.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
             var gradient = ctx.createLinearGradient(0, 0, 0, 225);
             gradient.addColorStop(0, "rgba(215, 227, 244, 1)");
@@ -346,7 +341,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             // Pie chart
             new Chart(document.getElementById("chartjs-dashboard-pie"), {
                 type: "pie",
@@ -374,7 +369,7 @@
         });
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             // Bar chart
             new Chart(document.getElementById("chartjs-dashboard-bar"), {
                 type: "bar",
@@ -420,7 +415,7 @@
         });
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             var markers = [{
                     coords: [31.230391, 121.473701],
                     name: "Shanghai"
@@ -487,7 +482,7 @@
         });
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             var date = new Date(Date.now() - 5 * 24 * 60 * 60 * 1000);
             var defaultDate = date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1) + "-" + date.getUTCDate();
             document.getElementById("datetimepicker-dashboard").flatpickr({

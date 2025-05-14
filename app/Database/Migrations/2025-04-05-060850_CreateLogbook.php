@@ -12,9 +12,10 @@ class CreateLogbook extends Migration
             'id_logbook'       => ['type' => 'INT', 'unsigned' => true, 'auto_increment' => true],
             'id_siswa'         => ['type' => 'INT', 'unsigned' => true],
             'hari_tanggal'     => ['type' => 'DATE'],
-            'jenis_kegiatan'    => ['type' => 'VARCHAR', 'constraint' => '100'],
+            'jenis_kegiatan'   => ['type' => 'VARCHAR', 'constraint' => '100'],
             'uraian_kegiatan'  => ['type' => 'TEXT'],
             'gambar'           => ['type' => 'VARCHAR', 'constraint' => '255'],
+            'status'           => ['type' => 'ENUM', 'constraint' => ['setuju', 'tidak_setuju'], 'default' => 'Diterima'],
             'created_at'       => ['type' => 'DATETIME', 'null' => true],
             'updated_at'       => ['type' => 'DATETIME', 'null' => true],
         ]);

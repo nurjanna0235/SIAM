@@ -13,6 +13,8 @@ $routes->post('/registrasi/submit', 'Auth::submit');
 $routes->get('/login', 'Auth::index');
 $routes->get('/admin/dashboard', 'Admin\DashboardController::index');
 $routes->get('/siswa/dashboard', 'Siswa\DashboardController::index');
+$routes->get('/orang_tua_siswa/dashboard', 'OrangTuaSiswa\DashboardController::index');
+$routes->get('/guru_pendamping/dashboard', 'GuruPendamping\DashboardController::index');
 
 //route admin//
 
@@ -92,12 +94,12 @@ $routes->post('/siswa/logbook/update/(:num)', 'Siswa\LogbookController::update/$
 $routes->get('/siswa/logbook/hapus/(:num)', 'Siswa\LogbookController::hapus/$1');
 
 //route untuk siswa bagian Profil
-$routes->get('/siswa/logbook', 'Siswa\ProfilController::index');
-$routes->get('/siswa/logbook/tambah', 'Siswa\ProfilController::tambah');
-$routes->post('/siswa/logbook/simpan', 'Siswa\ProfilController::simpan');
-$routes->get('/siswa/logbook/edit/(:num)', 'Siswa\ProfilController::edit/$1');
-$routes->post('/siswa/logbook/update/(:num)', 'Siswa\ProfilController::update/$1');
-$routes->get('/siswa/logbook/hapus/(:num)', 'Siswa\ProfilController::hapus/$1');
+$routes->get('/siswa/profil', 'Siswa\ProfilController::index');
+$routes->get('/siswa/profil/tambah', 'Siswa\ProfilController::tambah');
+$routes->post('/siswa/profil/simpan', 'Siswa\ProfilController::simpan');
+$routes->get('/siswa/profil/edit/(:num)', 'Siswa\ProfilController::edit/$1');
+$routes->post('/siswa/profil/update/(:num)', 'Siswa\ProfilController::update/$1');
+$routes->get('/siswa/profil/hapus/(:num)', 'Siswa\ProfilController::hapus/$1');
 
 //route untuk siswa bagian Jurusan
 $routes->get('/siswa/jurusan', 'Siswa\JurusanController::index');
@@ -106,3 +108,18 @@ $routes->post('/siswa/jurusan/simpan', 'Siswa\JurusanController::simpan');
 $routes->get('/siswa/jurusan/edit/(:num)', 'Siswa\JurusanController::edit/$1');
 $routes->post('/siswa/jurusan/update/(:num)', 'Siswa\JurusanController::update/$1');
 $routes->get('/siswa/jurusan/hapus/(:num)', 'Siswa\JurusanController::hapus/$1');
+
+//ROUTE ORANGTUA//
+//route untuk orangtua bagian Logbook
+$routes->get('/orang_tua_siswa/logbook', 'OrangTuaSiswa\LogbookController::index');
+$routes->get('/orang_tua_siswa/logbook/tambah', 'OrangTuaSiswa\LogbookController::tambah');
+$routes->post('/orang_tua_siswa/logbook/simpan', 'OrangTuaSiswa\LogbookController::simpan');
+$routes->get('/orang_tua_siswa/logbook/edit/(:num)', 'OrangTuaSiswa\LogbookController::edit/$1');
+$routes->post('/orang_tua_siswa/logbook/update/(:num)', 'OrangTuaSiswa\LogbookController::update/$1');
+$routes->get('/orang_tua_siswa/logbook/hapus/(:num)', 'OrangTuaSiswa\LogbookController::hapus/$1');
+
+//ROUTE GURUPENDAMPING//
+//route untuk Guru Pendamping bagian Validasi
+$routes->get('/guru_pendamping/validasi', 'GuruPendamping\ValidasiController::index');
+$routes->get('/guru_pendamping/validasi/setuju/(:num)', 'GuruPendamping\ValidasiController::setuju/$1');
+$routes->get('/guru_pendamping/validasi/tidak_setuju/(:num)', 'GuruPendamping\ValidasiController::tidak_setuju/$1');

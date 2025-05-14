@@ -15,6 +15,7 @@ class LogbookModel extends Model
         'hari_tanggal',
         'jenis_kegiatan',
         'uraian_kegiatan',
+        'status',
         'gambar',
     ];
 
