@@ -18,6 +18,14 @@ $routes->get('/guru_pendamping/dashboard', 'GuruPendamping\DashboardController::
 
 //route admin//
 
+//route untuk admin bagian guru pendamping
+$routes->get('/admin/guru_pendamping', 'Admin\GuruPendampingController::index');
+$routes->get('/admin/guru_pendamping/tambah', 'Admin\GuruPendampingController::tambah');
+$routes->post('/admin/guru_pendamping/simpan', 'Admin\GuruPendampingController::simpan');
+$routes->get('/admin/guru_pendamping/edit/(:num)', 'Admin\GuruPendampingController::edit/$1');
+$routes->post('/admin/guru_pendamping/update/(:num)', 'Admin\GuruPendampingController::update/$1');
+$routes->get('/admin/guru_pendamping/hapus/(:num)', 'Admin\GuruPendampingController::hapus/$1');
+
 //route untuk admin bagian siswa
 $routes->get('/admin/siswa', 'Admin\SiswaController::index');
 $routes->get('/admin/siswa/tambah', 'Admin\SiswaController::tambah');

@@ -42,7 +42,7 @@
                     <li class="sidebar-item <?= uri_string() == 'admin/guru_pendamping' ? 'active' : '' ?>">
                         <a class="sidebar-link" href="/admin/guru_pendamping">
                             <i class="align-middle" data-feather="user"></i>
-                            <span class="align-middle">Guru Penamping</span>
+                            <span class="align-middle">Guru Pendamping</span>
                         </a>
                     </li>
 

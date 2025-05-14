@@ -24,6 +24,12 @@ class UserSeed extends Seeder
                 'password' => password_hash('123', PASSWORD_DEFAULT),
                 'level'    => 'orang_tua',
             ],
+            [
+                'username' => 'janna 3',
+                'email'    => 'janna3@example.com',
+                'password' => password_hash('123', PASSWORD_DEFAULT),
+                'level'    => 'guru_pendamping',
+            ],
         ];
 
         // Insert data to 'users' table

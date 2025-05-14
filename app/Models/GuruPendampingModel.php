@@ -6,13 +6,13 @@ use CodeIgniter\Model;
 
 class GuruPendampingModel extends Model
 {
-    protected $table            = 'gurupendamping';
-    protected $primaryKey       = 'id';
+    protected $table            = 'guru_pendamping';
+    protected $primaryKey       = 'id_guru_pendamping';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['id_user', 'id_jurusan', 'nama_guru_pendamping', 'nip'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -21,7 +21,7 @@ class GuruPendampingModel extends Model
     protected array $castHandlers = [];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
