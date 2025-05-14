@@ -29,7 +29,8 @@ class CreateTimelineMagang extends Migration
                 'type' => 'DATE'
             ],
             'status' => [
-                'type' => 'DATE'
+                'type' => 'ENUM',
+                'constraint' => ['belum_mulai','mulai', 'selesai'],
             ],
             'created_at' => [
                 'type' => 'DATETIME',

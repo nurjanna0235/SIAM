@@ -17,6 +17,8 @@ class CreateSiswa extends Migration
                 'constraint'     => 11,
                 'unsigned'       => true,
             ],
+            'id_guru_pendamping' => [ 'type' => 'INT', 'constraint' => 11, 'unsigned' => true,
+            ],
             'nama'        => ['type' => 'VARCHAR', 'constraint' => '100'],
             'nik'        => ['type' => 'VARCHAR', 'constraint' => '100'],
             'kelas'        => ['type' => 'VARCHAR', 'constraint' => '100'],
@@ -29,6 +31,7 @@ class CreateSiswa extends Migration
         $this->forge->addForeignKey('id_user', 'user', 'id_user', 'CASCADE', 'CASCADE'); // Relasi ke tabel user
         $this->forge->addForeignKey('id_orang_tua', 'orang_tua', 'id_orang_tua', 'CASCADE', 'CASCADE'); // Relasi ke tabel orang_tua
         $this->forge->addForeignKey('id_jurusan', 'jurusan', 'id_jurusan', 'CASCADE', 'CASCADE');
+         $this->forge->addForeignKey('id_guru_pendamping', 'guru_pendamping', 'id_guru_pendamping', 'CASCADE', 'CASCADE');
         $this->forge->createTable('siswa');
     }
 

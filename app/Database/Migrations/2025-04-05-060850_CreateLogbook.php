@@ -15,13 +15,13 @@ class CreateLogbook extends Migration
             'jenis_kegiatan'   => ['type' => 'VARCHAR', 'constraint' => '100'],
             'uraian_kegiatan'  => ['type' => 'TEXT'],
             'gambar'           => ['type' => 'VARCHAR', 'constraint' => '255'],
-            'status'           => ['type' => 'ENUM', 'constraint' => ['setuju', 'tidak_setuju'], 'default' => 'Diterima'],
+            'status'           => ['type' => 'ENUM', 'constraint' => ['setuju', 'tidak_setuju']],
             'created_at'       => ['type' => 'DATETIME', 'null' => true],
             'updated_at'       => ['type' => 'DATETIME', 'null' => true],
         ]);
 
-        $this->forge->addKey('id_logbook', true); // Primary key
-        $this->forge->addForeignKey('id_siswa', 'siswa', 'id_siswa', 'CASCADE', 'CASCADE'); // Relasi ke tabel siswa
+        $this->forge->addKey('id_logbook', true);
+        $this->forge->addForeignKey('id_siswa', 'siswa', 'id_siswa', 'CASCADE', 'CASCADE');
 
         $this->forge->createTable('logbook');
     }
